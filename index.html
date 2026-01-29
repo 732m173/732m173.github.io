@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Mon Portfolio | Alex R.</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -41,20 +42,25 @@
             <h2>Mes Certifications</h2>
             <div class="galerie-certs">
                 <div class="cert-item">
-                    <img src="web_fundamentals.png" alt="Fondement du web">
+                    <img src="web_fundamentals.png" alt="Fondement du web" class="zoomable">
                     <p>Web Fundamentals</p>
                 </div>
                 <div class="cert-item">
-                    <img src="jr_penetration_tester.png" alt="Pentester junior">
+                    <img src="jr_penetration_tester.png" alt="Pentester junior" class="zoomable">
                     <p>Jr Penetration Tester</p>
                 </div>
                 <div class="cert-item">
-                    <img src="soc_level_1.png" alt="SOC lvl 1">
+                    <img src="soc_level_1.png" alt="SOC lvl 1" class="zoomable">
                     <p>SOC LVL 1</p>
                 </div>
             </div>
         </section>
     </main>
+
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgFull">
+    </div>
 
     <footer>
         <p>&copy; 2026 Alex R.</p>
