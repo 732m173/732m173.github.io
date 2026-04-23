@@ -3,68 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Rognone</title>
+    <title>Alex Rognone // CyberSec</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
 
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-trail" id="cursorTrail"></div>
+
+    <nav>
+        <a href="#presentation">Info</a>
+        <a href="#projets">Projets</a>
+        <a href="#certifications">Certs</a>
+    </nav>
+
     <header>
-        <h1>Alex R.</h1>
-        <p>Bienvenue sur ma page</p>
+        <div class="header-bg-glow"></div>
+        <div class="header-bg-glow2"></div>
+        <div class="header-tag">// Sécurité · Systèmes Embarqués · IoT</div>
+        <h1>
+            <span class="glitch" data-text="ALEX">ALEX</span><br>
+            ROGNONE
+        </h1>
+        <p class="header-subtitle">
+            L3 Sciences &amp; Technologie · <span>Fablab Manager</span> · Cybersécurité<br>
+            <span style="color:var(--dim);font-size:0.85rem;">Future: Ingénieur Cybersécurité — Systèmes Embarqués &amp; IoT</span>
+        </p>
+        <div class="scroll-hint">SCROLL DOWN</div>
     </header>
 
     <main>
         <section id="presentation">
-            <h2>Présentation</h2>
-            <div class="card">
-                <p>Bonjour ! Je m'appelle Alex. Je suis actuellement en L3 Sciences & Technologie. Je suis également <a href="https://univ-cotedazur.fr/formation/reussir-ses-etudes/fablab/a-propos-du-fablab">Fablab Manager</a> depuis 3 ans. Je suis passionné par la cybersécurité que j'étudie sur mon temps libre afin de devenir "Ingénieur Cybersécurité - Systèmes Embarqués & IoT".</p>
+            <div class="section-label">01 · Présentation</div>
+            <h2>À propos</h2>
+            <div class="card reveal">
+                <p>Bonjour ! Je m'appelle <strong style="color:var(--primary)">Alex</strong>. Je suis actuellement en L3 Sciences &amp; Technologie. Je suis également <a href="https://univ-cotedazur.fr/formation/reussir-ses-etudes/fablab/a-propos-du-fablab">Fablab Manager</a> depuis 3 ans. Je suis passionné par la cybersécurité que j'étudie sur mon temps libre afin de devenir <strong style="color:var(--primary)">"Ingénieur Cybersécurité — Systèmes Embarqués &amp; IoT"</strong>.</p>
+            </div>
+            <div class="status-bar" style="margin-top:1.5rem;margin-bottom:0;border-top:none;border-bottom:1px solid var(--card-border);padding-left:0">
+                <span><span class="status-dot"></span>SYSTÈME EN LIGNE</span>
+                <span>THM RANK: ACTIVE</span>
+                <span>LOCALISATION: Côte d'Azur</span>
             </div>
         </section>
 
         <section id="projets">
+            <div class="section-label">02 · Projets</div>
             <h2>Mes Projets</h2>
             <div class="grille-projets">
-                <div class="card projet">
-                    <h3>Projet BTS (Fin d'étude)</h3>
-                    <p>Programmation d'un présentoir</p>
+                <div class="card projet reveal">
+                    <div class="projet-num">PROJECT_01.exe</div>
+                    <h3>Projet BTS</h3>
+                    <p>Programmation d'un présentoir — projet de fin d'études</p>
                     <a href="https://github.com/732m173/projet/">Voir le projet</a>
                 </div>
-                <div class="card projet">
+                <div class="card projet reveal">
+                    <div class="projet-num">PROJECT_02.exe</div>
                     <h3>Projet SIEM</h3>
-                    <p>Installation d'un SIEM</p>
+                    <p>Installation & configuration d'un SIEM Wazuh en environnement Fablab</p>
                     <a href="https://github.com/732m173/siem_project#wazuh-siem-implementation---fablab-valrose">Voir le projet</a>
                 </div>
-                <div class="card projet">
-                    <h3>Convertisseur multi-format</h3>
-                    <p>Création d'un convertisseur multi-format</p>
+                <div class="card projet reveal">
+                    <div class="projet-num">PROJECT_03.exe</div>
+                    <h3>Convertisseur Multi-Format</h3>
+                    <p>Outil de conversion entre formats de fichiers multiples</p>
                     <a href="https://github.com/732m173/Multi-format_Converter">Voir le projet</a>
                 </div>
             </div>
         </section>
 
         <section id="certifications">
+            <div class="section-label">03 · Certifications</div>
             <h2>Mes Certifications</h2>
             <div class="galerie-certs">
-                <div class="cert-item">
-                    <img src="web_fundamentals.png" alt="Fondement du web" class="zoomable">
-                    <p>Web Fundamentals</p>
+                <div class="cert-item reveal" onclick="openModal('web_fundamentals.png','Web Fundamentals')">
+                    <img src="web_fundamentals.png" alt="Web Fundamentals">
+                    <div class="cert-label">Web Fundamentals</div>
                 </div>
-                <div class="cert-item">
-                    <img src="jr_penetration_tester.png" alt="Pentester junior" class="zoomable">
-                    <p>Jr Penetration Tester</p>
+                <div class="cert-item reveal" onclick="openModal('jr_penetration_tester.png','Jr Penetration Tester')">
+                    <img src="jr_penetration_tester.png" alt="Jr Penetration Tester">
+                    <div class="cert-label">Jr Penetration Tester</div>
                 </div>
-                <div class="cert-item">
-                    <img src="soc_level_1.png" alt="SOC lvl 1" class="zoomable">
-                    <p>SOC LVL 1</p>
+                <div class="cert-item reveal" onclick="openModal('soc_level_1.png','SOC Level 1')">
+                    <img src="soc_level_1.png" alt="SOC Level 1">
+                    <div class="cert-label">SOC Level 1</div>
                 </div>
             </div>
         </section>
     </main>
 
+    <footer>
+        <span>ALEX ROGNONE</span> · Cybersécurité · &copy; 2025 · Tous droits réservés
+    </footer>
+
     <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="imgFull">
+        <span class="close" onclick="closeModal()">[ FERMER ]</span>
+        <img class="modal-content" id="imgFull" src="" alt="">
     </div>
+
+    <script src="script.js" defer></script>
 </body>
 </html>
